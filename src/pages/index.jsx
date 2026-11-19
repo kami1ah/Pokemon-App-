@@ -1,2 +1,6 @@
 export {default as Home} from './HomePage'
 export {default as Ability} from './AbilityPage'
+export {default as EachAbility} from './EachAbility'
+export {default as Type} from './TypePage'
+export {default as AllPokemon} from './AllPokemonPage'
+export {default as EachPokemon} from './EachPokemon'

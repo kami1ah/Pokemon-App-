@@ -1,20 +1,21 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 const Ability = () => {
+    const navigate = useNavigate()
 
     const [ability, setAbility] = useState([])
     // const [abilityImg, setImage] = useState({ images: {} })
 
-    const fetchAbility = async () => {
+    const fetchAbilities = async () => {
         const response = await fetch(`https://pokeapi.co/api/v2/ability/`)
         const abilityData = await response.json()
         setAbility(abilityData.results)
     }
 
     useEffect(() => {
-        fetchAbility()
+        fetchAbilities()
     }, [])
 
 
